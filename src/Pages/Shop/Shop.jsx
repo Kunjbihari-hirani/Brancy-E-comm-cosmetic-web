@@ -4,7 +4,6 @@ import Card from '../../components/CategoriesCard';
 import TopSalesCards from '../../components/TopSalesCards';
 import ProductContext from '../../context/ProductContext';
 
-
 const cards = [
   {
     id: 1,

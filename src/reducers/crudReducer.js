@@ -1,5 +1,7 @@
 const crudReducer = (state, { type, payload }) => {
-  const match = /(LOAD|ADD|UPDATE|DELETE)_(.*)_(SUCCESS)/.exec(type);
+  const match = /(LOAD|ADD|ORDER|UPDATE|DELETE|RESET)_(.*)_(SUCCESS)/.exec(
+    type,
+  );
   if (!match) return state;
   const [, action] = match;
   switch (action) {
@@ -7,6 +9,9 @@ const crudReducer = (state, { type, payload }) => {
       return payload;
 
     case 'ADD':
+      return [...state, payload];
+
+    case 'ORDER':
       return [...state, payload];
 
     case 'UPDATE': {

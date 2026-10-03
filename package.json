@@ -4,23 +4,21 @@
   "description": "learning webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
     "start": "webpack serve",
-    "start:server": "json-server db.json",
-    "prepare": "husky install"
+    "start:server": "json-server db.json -m ./node_modules/json-server-auth"
   },
   "keywords": [
     "abc",
     "pqr"
   ],
-  "author": "Yagnesh Modh <yagnesh.modh@gmail.com>",
+  "author": "Kunjbihari Hirani <kunjbiharihirani@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@stripe/react-stripe-js": "^2.6.2",
+    "@stripe/stripe-js": "^3.2.0",
     "class-variance-authority": "^0.7.0",
-    "json-server": "^1.0.0-alpha.23",
     "localforage": "^1.10.0",
     "lucide-react": "^0.363.0",
     "match-sorter": "^6.3.3",
@@ -33,7 +31,8 @@
     "react-router-hash-link": "^2.4.3",
     "sort-by": "^1.2.0",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
@@ -54,8 +53,11 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
     "husky": "^8.0.0",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "lint-staged": "^15.2.1",
     "postcss": "^8.4.33",
     "postcss-easings": "^4.0.0",

@@ -2,11 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import Badge from '../Badge';
 
-function Card({ name, className, imageUrl, badge }) {
+function Card({ title, name, className, imageUrl, badge }) {
   return (
     <div
       className={clsx(
-        'rotate hover:rotate-y-full aspect-w-3 gap-3 aspect-h-4 relative flex h-52 w-auto transform-gpu flex-col items-center justify-center space-x-4 rounded-xl  transition-transform hover:shadow-2xl md:h-60 lg:h-60 lg:w-full',
+        'rotate hover:rotate-y-full aspect-w-3 aspect-h-4 relative flex h-52 w-auto transform-gpu flex-col items-center justify-center gap-3 space-x-4 rounded-xl  transition-transform hover:shadow-2xl md:h-60 lg:h-60 lg:w-full',
         {
           [className]: !!className,
         },
@@ -20,7 +20,7 @@ function Card({ name, className, imageUrl, badge }) {
       ) : (
         ''
       )}
-      <img src={imageUrl} alt="image_logo" />
+      <img src={imageUrl} title={title} alt={title} />
       <div className="h-1 w-10 rounded-full bg-red-500" />
       <div>{name}</div>
     </div>

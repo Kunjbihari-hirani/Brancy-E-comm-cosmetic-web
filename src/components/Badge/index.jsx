@@ -6,7 +6,7 @@ function Badge({ badge, className }) {
     case 'hot':
       return (
         <p
-          className={clsx('badge z-20 bg-[#ff6565]', {
+          className={clsx('badge z-20 bg-[#B30000]', {
             [className]: !!className,
           })}
         >
@@ -16,7 +16,7 @@ function Badge({ badge, className }) {
     case 'new':
       return (
         <p
-          className={clsx('badge z-20 bg-[#835bf4]', {
+          className={clsx('badge z-20 bg-[#B30000]', {
             [className]: !!className,
           })}
         >
@@ -26,9 +26,12 @@ function Badge({ badge, className }) {
     case 'beauty':
       return (
         <p
-          className={clsx('badge z-20 px-5 hover:bg-purple-500 py-2 bg-[#9cdbff] capitalize', {
-            [className]: !!className,
-          })}
+          className={clsx(
+            'badge z-20 bg-[#005180] px-5 py-2 capitalize hover:bg-purple-500',
+            {
+              [className]: !!className,
+            },
+          )}
         >
           {badge}
         </p>

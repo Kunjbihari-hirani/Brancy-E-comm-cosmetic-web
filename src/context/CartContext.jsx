@@ -5,6 +5,7 @@ import React, {
   useEffect,
   useMemo,
   useReducer,
+  useState,
 } from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-unresolved
@@ -13,6 +14,7 @@ import {
   DELETE_CART,
   FAIL,
   LOAD_CART,
+  ORDER_CART,
   REQUEST,
   SUCCESS,
   UPDATE_CART,
@@ -137,9 +139,34 @@ export function CartProvider({ children }) {
     }
   }, []);
 
+  const orderDone = useCallback(async item => {
+    try {
+      dispatch({ type: `${ORDER_CART}_${REQUEST}`, payload: {} });
+      const res = await fetch(' http://localhost:3000/orders', {
+        method: 'POST',
+        body: JSON.stringify(item),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      });
+      const json = await res.json();
+      dispatch({
+        type: `${ORDER_CART}_${SUCCESS}`,
+        payload: { cartPayload: json },
+      });
+      console.log(json);
+    } catch (error) {
+      dispatch({
+        type: `${ORDER_CART}_${FAIL}`,
+        payload: { errorPayload: error },
+      });
+    }
+  }, []);
+
   useEffect(() => {
     loadCart();
-  }, [loadCart]);
+  }, []);
 
   const value = useMemo(
     () => ({
@@ -148,8 +175,9 @@ export function CartProvider({ children }) {
       addCart,
       updateCart,
       deleteCart,
+      orderDone,
     }),
-    [cartState, loadCart, addCart, updateCart, deleteCart],
+    [cartState, loadCart, addCart, updateCart, deleteCart, orderDone],
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

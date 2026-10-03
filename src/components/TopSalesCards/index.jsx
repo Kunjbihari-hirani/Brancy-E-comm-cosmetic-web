@@ -7,7 +7,7 @@ import ExpandIcon from '../../icons/Expand-Icon.svg';
 import HeartIcon from '../../icons/Heart-Icon.svg';
 import { useCart } from '../../context/CartContext';
 
-function TopSalesCards({ name, imageUrl, price, item }) {
+function TopSalesCards({ name, title, imageUrl, price, item }) {
   const [addtocart, setAddtocart] = useState('Add To Cart');
 
   const handleSubmit = () => {
@@ -25,12 +25,17 @@ function TopSalesCards({ name, imageUrl, price, item }) {
     }
     return addCart({ ...item, Quantity: 1 });
   };
-  console.log(cart);
+  // console.log(cart);
 
   return (
     <div className="topCard relative w-full">
       <div className="relative flex overflow-hidden rounded-xl">
-        <img className=" flex-grow rounded-xl" src={imageUrl} alt="img_logo" />
+        <img
+          className=" flex-grow rounded-xl"
+          src={imageUrl}
+          title={title}
+          alt={title}
+        />
         <div className="addcart_div">
           <form
             onSubmit={e => {
@@ -39,7 +44,7 @@ function TopSalesCards({ name, imageUrl, price, item }) {
             }}
             className="flex w-full items-center gap-5 px-10 lg:px-7"
           >
-            <Link to={`/shop/${item.id}`} className="buttonCarts">
+            <Link to={`/shop/${item.id}`} title={title} className="buttonCarts">
               <ExpandIcon />
             </Link>
             <button

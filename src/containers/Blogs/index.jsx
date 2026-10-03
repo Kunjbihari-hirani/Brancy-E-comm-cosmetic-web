@@ -39,6 +39,7 @@ function Blogs() {
         <div className="grid grid-cols-1 gap-7 pt-10 sm:grid-cols-2 lg:grid-cols-3">
           {Blogcards.map(x => (
             <BlogCards
+              title={x.title}
               key={x.id}
               name={x.title}
               imageUrl={x.imageUrl}

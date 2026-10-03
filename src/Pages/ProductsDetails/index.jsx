@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CiStar } from 'react-icons/ci';
 import { TiStarFullOutline } from 'react-icons/ti';
 import { useParams } from 'react-router-dom';
@@ -12,8 +12,18 @@ function ProducDetails() {
   const { Products } = useContext(ProductContext);
   const { cart, addCart, updateCart } = useCart();
 
+  const [addtocart, setAddtocart] = useState('Add To Cart');
+
+  const handleSubmit = () => {
+    setAddtocart('Item Added');
+    setTimeout(() => {
+      setAddtocart('Add To Cart');
+    }, 2000);
+  };
+
   const items = Products.find(x => x.id === id);
   const onAddtoCart = () => {
+    handleSubmit();
     const data = cart.find(x => x.id === id);
     if (data) {
       return updateCart({ ...data, Quantity: data.Quantity + 1 });
@@ -58,7 +68,7 @@ function ProducDetails() {
                 }}
                 className="flex h-10 flex-1 cursor-pointer items-center justify-center rounded-full bg-white px-2 py-1 text-sm ring-2 ring-red-400 xsm:px-0 xsm:py-0 xsm:text-[100%]"
               >
-                Add To Cart
+                {addtocart}
               </button>
               <HashLink
                 className="flex h-10 flex-1 cursor-pointer items-center justify-center rounded-full bg-white px-2 py-1 text-sm ring-2 ring-red-400 xsm:px-0 xsm:py-0 xsm:text-[100%]"

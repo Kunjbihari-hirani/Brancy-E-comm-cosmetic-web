@@ -1,11 +1,31 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
+import { useNavigate } from 'react-router-dom';
 import PlushIcon from '../../icons/plus-round-icon.svg';
 import MinusIcon from '../../icons/minus-round-icon.svg';
 import { useCart } from '../../context/CartContext';
+import { useLogin } from '../../context/LoginContext';
 
 function Cart() {
   const { cart, deleteCart, updateCart } = useCart();
+  const { user } = useLogin();
+  const navigate = useNavigate();
+
+  const resetAll = () => {
+    for (let i = 0; i < cart.length; i++) {
+      const element = cart[i];
+      deleteCart(element);
+    }
+  };
+
+  const onCheckout = () => {
+    console.log(user);
+    if (!user) {
+      navigate('/auth');
+    } else {
+      navigate('/checkout');
+    }
+  };
 
   const QntIncDecre = (increment, id) => {
     const data = cart.find(x => x.id === id);
@@ -22,18 +42,26 @@ function Cart() {
       <div className="mx-2 flex flex-col items-center gap-5 px-container">
         {cart?.length > 0 ? (
           <>
-            <HashLink
-              smooth
-              to="/checkout"
-              className="mx-2 my-2 flex w-full justify-end md:mx-24"
-            >
-              <button
-                className="rounded-md bg-[#ff6565] px-4 py-1 text-white hover:bg-[#f58787]"
-                type="button"
-              >
-                Checkout
-              </button>
-            </HashLink>
+            <div className="my-2 flex w-full flex-col justify-between gap-5 md:flex-row">
+              <p className="text-3xl font-bold">Shopping Cart</p>
+              <div className="flex gap-3">
+                <button
+                  onClick={onCheckout}
+                  className="w-52 flex-1 rounded-full bg-green-500 px-4 py-1 text-white hover:bg-green-700"
+                  type="button"
+                >
+                  Procced to Buy
+                </button>
+                <button
+                  onClick={resetAll}
+                  className="w-52 flex-1 rounded-full bg-[#ff6565] px-4 py-1 text-white hover:bg-[#f58787]"
+                  type="button"
+                >
+                  Clear Cart
+                </button>
+              </div>
+            </div>
+
             {cart?.map(x => (
               <div
                 className="mx-auto w-full items-center gap-2 rounded-lg bg-slate-500 p-5 font-bold text-black md:flex"

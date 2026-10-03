@@ -12,18 +12,19 @@ function About() {
                 <img
                   className="animation_fade_left w-80 object-contain lg:w-96"
                   src="https://htmldemo.net/brancy/brancy/assets/images/photos/about-title.webp"
-                  alt=""
+                  alt="about"
                   width={180}
                   height={97}
+                  title="about"
                 />
               </div>
-              <div className="animation_fade_up text-[5vw] font-bold tracking-wider text-black lg:text-[60px]">
+              <h1 className=" text-[5vw] font-bold tracking-wider text-black lg:text-[60px]">
                 We, are Brancy
-              </div>
-              <div className="animation_fade_up_des mb-1 underline lg:text-[21px]">
+              </h1>
+              <div className=" mb-1 underline lg:text-[21px]">
                 Best Cosmetic Provider
               </div>
-              <div className="animation_fade_up_des mb-4 lg:text-[21px]">
+              <div className=" mb-4 lg:text-[21px]">
                 Discover the beauty within with Brancy , be Beautiful You.It
                 means you can wear the less makeup and let skin SHINE through.
               </div>
@@ -31,10 +32,9 @@ function About() {
             {/* right section About */}
             <div className="flex flex-1">
               <img
-                loading="lazy"
-                className="animation_img"
                 src="https://htmldemo.net/brancy/brancy/assets/images/photos/about1.webp"
                 alt="image_of_cosmetics"
+                title="image_of_cosmetics"
               />
             </div>
           </div>
@@ -47,6 +47,7 @@ function About() {
             className=""
             src="https://htmldemo.net/brancy/brancy/assets/images/icons/funfact1.webp"
             alt="imglogo"
+            title="imglogo"
           />
           <hr className="m-5 w-60 self-center border border-[#ff6565]" />
           <div className="text-3xl font-medium">
@@ -58,6 +59,7 @@ function About() {
           <img
             src="https://htmldemo.net/brancy/brancy/assets/images/icons/funfact2.webp"
             alt="imglogo"
+            title="imglogo"
           />
           <hr className="m-5 w-60 self-center border border-[#ff6565]" />
           <div className="text-3xl font-medium">
@@ -67,8 +69,9 @@ function About() {
         </div>
         <div className="mx-5 flex flex-grow flex-col items-center justify-center gap-2 rounded-xl border-2 border-[#ff6565] p-3 lg:mx-auto">
           <img
-            src="https://htmldemo.net/brancy/brancy/assets/images/icons/funfact2.webp"
+            src="https://htmldemo.net/brancy/brancy/assets/images/icons/funfact3.webp"
             alt="imglogo"
+            title="imglogo"
           />
           <hr className="m-5 w-60 self-center border border-[#ff6565]" />
           <div className="text-3xl font-medium">
@@ -82,74 +85,79 @@ function About() {
           <h2 className="mb-4 pb-5 pt-8 text-3xl font-bold sm:mb-6 md:text-5xl lg:text-6xl">
             Best Cosmetics Provider
           </h2>
-          <p className="px-5 text-center text-lg xsm:px-20 sm:text-base md:text-lg xl:px-60">
+          <h3 className="px-5 text-center text-lg xsm:px-20 sm:text-base md:text-lg xl:px-60">
             Your Premier Destination for Beauty Essentials Step into a realm of
             elegance and luxury with our handpicked selection of cosmetics.
             Explore our collection and experienc the difference in quality and
             Sophistication. Elevate your beauty routine with us today.
-          </p>
+          </h3>
         </div>
         <div className="mt-20 sm:mb-0 sm:mr-8">
           <img
+            title="aboutImg"
             src="https://htmldemo.net/brancy/brancy/assets/images/photos/about2.webp"
             alt="aboutImg"
+            // loading="lazy"
           />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 gap-10 bg-sky-100 px-5 pb-5 pt-10 sm:grid-cols-2 lg:grid-cols-3">
         <div className="mx-5 flex flex-grow flex-col items-center justify-center gap-2 rounded-xl border-2 border-[#ff6565] p-3 lg:mx-auto">
           <div className="feature-item flex flex-col items-start justify-center gap-3 ">
-            <h5 className=" flex items-center justify-center gap-4 text-xl font-medium">
+            <h3 className=" flex items-center justify-center gap-4 text-xl font-medium">
               <img
                 className="h-auto"
                 src="https://cosmetic-seven-semicolons.vercel.app/images/feature1.webp"
                 width="50"
                 height="50"
                 alt="Icon"
+                title="Icon"
               />
               SUPPORT TEAM
-            </h5>
-            <p className="flex justify-center pl-2 text-base font-normal xl:text-lg">
+            </h3>
+            <h4 className="flex justify-center pl-2 text-base font-normal xl:text-lg">
               Our Support Team is your dedicated ally, ensuring your needs are
               met with care and expertise to ensure quality support.
-            </p>
+            </h4>
           </div>
         </div>
         <div className="mx-5 flex flex-grow flex-col items-center justify-center gap-2 rounded-xl border-2 border-[#ff6565] p-3 lg:mx-auto">
           <div className="feature-item flex flex-col items-start justify-center gap-3 ">
-            <h5 className=" flex items-center justify-center gap-4 text-xl font-medium">
+            <h3 className=" flex items-center justify-center gap-4 text-xl font-medium">
               <img
                 className="h-auto"
                 src="https://cosmetic-seven-semicolons.vercel.app/images/feature2.webp"
                 width="50"
                 height="50"
                 alt="Icon"
+                title="Icon"
               />
               CERTIFICATION
-            </h5>
-            <p className="flex justify-center pl-2 text-base font-normal xl:text-lg">
+            </h3>
+            <h4 className="flex justify-center pl-2 text-base font-normal xl:text-lg">
               Ensuring Quality and Trust in Every Product. Our commitment to
               excellence guarantees your confidence in our offerings.
-            </p>
+            </h4>
           </div>
         </div>
         <div className="mx-5 flex flex-grow flex-col items-center justify-center gap-2 rounded-xl border-2 border-[#ff6565] p-3 lg:mx-auto">
           <div className="feature-item flex flex-col items-start justify-center gap-3 ">
-            <h5 className=" flex items-center justify-center gap-4 text-xl font-medium">
+            <h3 className=" flex items-center justify-center gap-4 text-xl font-medium">
               <img
                 className="h-auto"
                 src="https://cosmetic-seven-semicolons.vercel.app/images/feature3.webp"
                 width="50"
                 height="50"
                 alt="Icon"
+                title="Icon"
               />
               NATURAL PRODUCTS
-            </h5>
-            <p className="flex justify-center pl-2 text-base font-normal xl:text-lg">
+            </h3>
+            <h4 className="flex justify-center pl-2 text-base font-normal xl:text-lg">
               Harnessing the Power of Nature for Your Beauty. Discover our range
               crafted with care for a healthier, radiant you.
-            </p>
+            </h4>
           </div>
         </div>
       </div>

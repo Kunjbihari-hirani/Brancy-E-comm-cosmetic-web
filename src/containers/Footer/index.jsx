@@ -13,10 +13,11 @@ function Footer() {
       <div className="mx-auto px-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div className="footer_box">
-            <HashLink smooth to="/#home" aria-label="Logo_Brancy">
+            <HashLink smooth to="/#home" title="home" aria-label="Logo_Brancy">
               <img
+                title="Brancy Logo"
                 src="https://template.hasthemes.com/brancy/brancy/assets/images/logo.webp"
-                alt=""
+                alt="Brancy logo"
               />
             </HashLink>
             <p className="pr-3 pt-5">
@@ -27,23 +28,28 @@ function Footer() {
           <div className="footer_box">
             <h3 className="pb-5 text-xl font-bold">Information</h3>
             <div className="grid grid-cols-3 gap-5">
-              <HashLink smooth to="/#blogs" className="footer_logo">
+              <HashLink
+                smooth
+                to="/#blogs"
+                title="blogs"
+                className="footer_logo"
+              >
                 Blog
               </HashLink>
-              <HashLink to="/about" className="footer_logo">
+              <HashLink to="/about" title="about" className="footer_logo">
                 About us
               </HashLink>
-              <HashLink to="/contact" className="footer_logo">
+              <HashLink to="/contact" title="contact" className="footer_logo">
                 Contact
               </HashLink>
               {/* /notfound */}
-              <HashLink to="/notfound" className="footer_logo">
+              <HashLink to="/notfound" title="privacy" className="footer_logo">
                 Privacy
               </HashLink>
-              <HashLink to="/shop" className="footer_logo">
+              <HashLink to="/shop" title="shop" className="footer_logo">
                 Shop
               </HashLink>
-              <HashLink to="/notfound" className="footer_logo">
+              <HashLink to="/notfound" title="faqs" className="footer_logo">
                 FAQs
               </HashLink>
             </div>

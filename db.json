@@ -49,5 +49,68 @@
       "price": 21500
     }
   ],
-  "CartItems": []
+  "CartItems": [],
+  "users": [
+    {
+      "email": "asdfae@gmail.com",
+      "password": "$2a$10$9bkc/XOl7HR4efZ4ZCskwuN3vysGUI7vVZRb2o9KZ.OSMcKZob5Da",
+      "name": "kunj",
+      "id": 1
+    },
+    {
+      "email": "asdfae1111@gmail.com",
+      "password": "$2a$10$i1u6OQE8ZkL.oPXaPm6cMei4s3ZKhHRTtf9AnZgtfux7AtFZGWfUO",
+      "name": "kunjkunj",
+      "id": 2
+    },
+    {
+      "email": "test@mailinator.com",
+      "password": "$2a$10$yyinRR8iGCh1Q14bBNm3RucGzhXZcA3ulhcDcdIT1DSTqQjBUpnU2",
+      "name": "asdaefa",
+      "id": 3
+    },
+    {
+      "email": "test12test@gmail.com",
+      "password": "$2a$10$O9DqMCeSqonmadXC4knEj.KbVYTKgkASn7S1PpbhWvplK4endIVeW",
+      "name": "kunjfad",
+      "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "id": "2",
+      "title": "Modern Eye Brush",
+      "imageUrl": "https://template.hasthemes.com/brancy/brancy/assets/images/shop/2.webp",
+      "price": 6000,
+      "Quantity": 1
+    },
+    {
+      "id": "1",
+      "title": "Readable content DX22",
+      "imageUrl": "https://template.hasthemes.com/brancy/brancy/assets/images/shop/1.webp",
+      "price": 2000,
+      "Quantity": 1
+    },
+    {
+      "id": "3",
+      "title": "Voyage face cleaner",
+      "imageUrl": "https://template.hasthemes.com/brancy/brancy/assets/images/shop/3.webp",
+      "price": 1000,
+      "Quantity": 1
+    },
+    {
+      "id": "8",
+      "title": "Offbite instant Age rewinder Eraser",
+      "imageUrl": "https://ik.imagekit.io/b8au2iwe2/dropper_img.webp?updatedAt=1711035603470",
+      "price": 21500,
+      "Quantity": 1
+    },
+    {
+      "id": "6",
+      "title": "Fusion facial cream",
+      "imageUrl": "https://template.hasthemes.com/brancy/brancy/assets/images/shop/6.webp",
+      "price": 1500,
+      "Quantity": 1
+    }
+  ]
 }

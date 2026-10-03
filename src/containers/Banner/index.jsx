@@ -4,7 +4,6 @@ import PinterestIcon from '../../icons/pinterest-icon.svg';
 import TwitterIcon from '../../icons/twitter-icon.svg';
 import FacebookIcon from '../../icons/facebook-round-icon.svg';
 
-
 function Banner() {
   // eslint-disable-next-line no-unused-vars
   const [date, setDate] = useState(new Date());
@@ -13,26 +12,27 @@ function Banner() {
     <section className="min-h-fit" id="home">
       <div className="hero relative min-h-fit py-5">
         <div className="flex items-center justify-center md:pt-20">
-          <div className="mx-auto flex flex-col items-center justify-center px-container md:flex-row">
+          <div className="mx-auto my-5 flex flex-col items-center justify-center px-container md:flex-row">
             {/* left section hero */}
             <div className="mt-40 flex flex-1 flex-col items-center justify-center text-center xsm:relative xsm:mt-48 xsm:items-start xsm:text-left md:mt-20">
               <div className="xsm:absolute xsm:-z-10 xsm:mb-48 md:mb-44 lg:mb-64">
                 <img
-                  className="animation_fade_left object-contain lg:w-80"
+                  className="object-contain lg:w-80"
                   src="	https://template.hasthemes.com/brancy/brancy/assets/images/slider/text-theme.webp"
-                  alt=""
+                  alt="Best img"
+                  title="Best img"
                   width={180}
                   height={97}
                 />
               </div>
-              <div className="animation_fade_up text-[5vw] font-bold tracking-wider text-[#231942] lg:text-[60px]">
+              <h1 className="text-[5vw] font-bold tracking-wider text-[#231942] lg:text-[60px]">
                 CLEAN FRESH
-              </div>
-              <div className="animation_fade_up_des mb-4 lg:text-[21px]">
+              </h1>
+              <div className="mb-4 lg:text-[21px]">
                 Discover the transformative magic of Brancy cosmetics, designed
                 to elevate your daily routine with effortless elegance.
               </div>
-              <HashLink smooth to="/shop" className="nav_link">
+              <HashLink smooth to="/shop" title="shop" className="nav_link">
                 <button
                   type="button"
                   className="flex cursor-pointer items-center rounded-full border-2 border-[#231942] bg-white to-teal-500 px-8 py-[0.7rem] text-sm font-medium tracking-[0.2em] text-[#231942] hover:border-[#ff6565] hover:bg-[#ff6565] hover:text-white"
@@ -42,12 +42,12 @@ function Banner() {
               </HashLink>
             </div>
             {/* right section hero */}
-            <div className="flex flex-1">
+            <div className="flex flex-1 justify-center">
               <img
-                loading="lazy"
-                className="animation_img"
-                src="https://template.hasthemes.com/brancy/brancy/assets/images/slider/slider1.webp"
+                src="https://ik.imagekit.io/b8au2iwe2/Banner_img%20(1).webp?updatedAt=1712471115718"
                 alt="image_of_cosmetics"
+                className="h-60 md:h-72 lg:h-96"
+                title="image_of_cosmetics"
               />
             </div>
           </div>

@@ -25,7 +25,7 @@ export function ProductContextProvider({ children }) {
 
   useEffect(() => {
     FetchProduct();
-  }, [FetchProduct]);
+  }, []);
 
   const contextValue = useMemo(
     () => ({

@@ -54,6 +54,7 @@ function Categories() {
       <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-8 md:grid-cols-3 xl:grid-cols-6">
         {cards.map(x => (
           <Card
+            title={x.title}
             key={x.id}
             name={x.title}
             className={x.className}

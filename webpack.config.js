@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   mode: 'development',
   module: {
@@ -38,7 +39,7 @@ module.exports = {
   },
   devServer: {
     open: true,
-    port: 3100,
+    port: 3800,
     historyApiFallback: true,
   },
 };

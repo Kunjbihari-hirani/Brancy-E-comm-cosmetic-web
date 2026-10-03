@@ -14,6 +14,11 @@ import Notfound from './Pages/Notfound/Notfound';
 import { ProductContextProvider } from './context/ProductContext';
 import { CartProvider } from './context/CartContext';
 import Checkout from './Pages/Checkout/Checkout';
+import AuthLayout from './Layout/authLayout';
+import Login from './Pages/auth/Login';
+import Register from './Pages/auth/Register';
+import { LoginContextProvider } from './context/LoginContext';
+import ThankyouOrder from './Pages/TankyouOrder/ThankyouOrder';
 
 // Clear the existing HTML content
 document.body.innerHTML = '<div id="app"></div>';
@@ -27,6 +32,20 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: '/auth',
+        element: <AuthLayout />,
+        children: [
+          {
+            index: true,
+            element: <Login />,
+          },
+          {
+            path: 'register',
+            element: <Register />,
+          },
+        ],
       },
       {
         path: '/shop',
@@ -56,15 +75,22 @@ const router = createBrowserRouter([
         path: '/notfound',
         element: <Notfound />,
       },
+      {
+        path: '/thankyou',
+        element: <ThankyouOrder />,
+      },
+    
     ],
   },
 ]);
 
 const root = createRoot(document.getElementById('app'));
 root.render(
-  <ProductContextProvider>
-    <CartProvider>
-      <RouterProvider router={router} />
-    </CartProvider>
-  </ProductContextProvider>,
+  <LoginContextProvider>
+    <ProductContextProvider>
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
+    </ProductContextProvider>
+  </LoginContextProvider>,
 );
