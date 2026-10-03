@@ -4,7 +4,7 @@
   "description": "learning webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
+    "dev": "webpack serve",
     "start:server": "json-server db.json -m ./node_modules/json-server-auth"
   },
   "keywords": [
